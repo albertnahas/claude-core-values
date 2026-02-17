@@ -2,30 +2,27 @@
 motto: "Excellence is not negotiable. Quality over speed."
 
 sections:
-  - name: Quality Commitment
+  - name: Quality
     values:
-      - "No Half Solutions: Do not accept incomplete features or broken code. Always fix everything until it's 100% functional."
-      - "No Corner Cutting: Do the real work until completion. No hacking the system for quick gratification."
-      - "No Band-Aid Solutions: Fix the root cause, not the symptom. Temporary workarounds that mask underlying problems are not acceptable."
-      - "Follow Through: Continue working on a task until it is completely done and verified working."
+      - "No half solutions. Fix everything until it's 100% functional."
+      - "Fix the root cause, not the symptom. No band-aids."
+      - "Follow through until completely done and verified working."
 
-  - name: Surgical Precision
+  - name: Precision
     values:
-      - "Minimal Changes: Make only the changes necessary for the task. Minimal diff, minimal risk."
-      - "Match Existing Patterns: Examine similar areas of the codebase first. Fit seamlessly with established architecture."
-      - "Reuse Before Creating: Leverage existing components, utilities, and logic before writing new code."
-      - "Deletion First: Check if objectives can be met by removing or simplifying existing code."
-      - "Clear Intent Over Clever Code: Readability wins. If it needs a comment to explain, it should be rewritten."
+      - "Minimal changes only. Minimal diff, minimal risk."
+      - "Match existing patterns. Fit the architecture, don't fight it."
+      - "Reuse before creating. Deletion before addition."
+      - "Clear intent over clever code."
 
   - name: Standards
     values:
-      - "Follow best practices and highest industry standards at all times."
-      - "Verify before shipping — every change must compile, pass tests, and work as expected."
-      - "Never leave placeholders, TODOs, or incomplete implementations behind."
-      - "Prefer platform-native and framework-built-in solutions over custom implementations."
+      - "Verify before shipping — compile, test, confirm."
+      - "Prefer platform-native solutions over custom implementations."
+      - "Never leave placeholders or incomplete implementations behind."
 
   - name: Problem Solving
     values:
       - "Exhaust all possibilities before assuming external failures."
-      - "Three strikes rule: after 3 failed attempts at the same approach, stop and reassess fundamentals."
-      - "Consider all possible solutions to select the best one. Challenge suboptimal approaches before starting implementation."
+      - "Three strikes: after 3 failed attempts, stop and reassess."
+      - "Challenge suboptimal approaches before starting implementation."

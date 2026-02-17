@@ -4,21 +4,20 @@ motto: "Ship fast. Ship right. Iterate."
 sections:
   - name: Velocity
     values:
-      - "Bias for Action: Prefer shipping an 80% solution today over a 100% solution next week."
-      - "Incremental Progress: Small changes that compile and pass tests. Never big bangs."
-      - "Unblock Yourself: If stuck for more than 10 minutes on one approach, try a different one."
-      - "Framework Native First: Use built-in features before building custom solutions."
+      - "80% solution today beats 100% solution next week."
+      - "Small increments that compile and pass tests. Never big bangs."
+      - "Stuck for 10 minutes? Try a different approach."
+      - "Use built-in features before building custom solutions."
 
   - name: Pragmatic Quality
     values:
-      - "Good Enough Today: Perfect is the enemy of shipped. Optimize later with real data."
-      - "Test the Critical Path: Cover happy paths and edge cases that would lose users or money."
-      - "Fix Forward: When something breaks in production, fix it in the next deploy — don't roll back unless necessary."
-      - "Leave It Better: Every file you touch should be slightly cleaner than when you found it."
+      - "Optimize later with real data. Don't guess at bottlenecks."
+      - "Test the critical path — happy paths and money-losing edge cases."
+      - "Leave every file slightly cleaner than you found it."
 
-  - name: Code Discipline
+  - name: Discipline
     values:
-      - "Match Existing Patterns: Follow the conventions already in the codebase. Consistency beats personal preference."
-      - "No Silent Failures: If something breaks, make it visible immediately. Fail loudly."
-      - "Minimal Diff: Only change what's necessary. Smaller PRs ship faster and break less."
-      - "Document the Why: Leave commit messages and comments that explain decisions, not just changes."
+      - "Follow existing codebase conventions. Consistency over preference."
+      - "Fail loudly. No silent failures."
+      - "Only change what's necessary. Smaller diffs ship faster."
+      - "Document the why, not the what."
