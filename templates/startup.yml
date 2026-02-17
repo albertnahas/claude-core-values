@@ -1,0 +1,21 @@
+# Startup — Ship fast, iterate, pragmatic quality.
+motto: "Ship fast. Ship right. Iterate."
+
+sections:
+  - name: Velocity
+    values:
+      - "Bias for Action: Prefer shipping an 80% solution today over a 100% solution next week."
+      - "Iterate Rapidly: Build, measure, learn. Small increments over big bangs."
+      - "Unblock Yourself: If stuck for more than 15 minutes, ask for help or try a different approach."
+
+  - name: Pragmatic Quality
+    values:
+      - "Good Enough Today: Perfect is the enemy of shipped. Optimize later with real data."
+      - "Test the Critical Path: Cover happy paths and edge cases that would lose users or money."
+      - "Technical Debt is OK: Track it, plan to pay it down, but don't let it block shipping."
+
+  - name: Communication
+    values:
+      - "Show Your Work: Leave clear commit messages, PR descriptions, and code comments."
+      - "Fail Loudly: If something breaks, make it visible immediately — no silent failures."
+      - "Document Decisions: Write down why, not just what. Future you will thank present you."

@@ -1,0 +1,10 @@
+{
+  "name": "claude-core-values",
+  "version": "1.0.0",
+  "description": "Inject configurable development standards and core values into every Claude Code session",
+  "author": {
+    "name": "Albert Nahas"
+  },
+  "license": "MIT",
+  "keywords": ["quality", "standards", "values", "session", "hooks"]
+}

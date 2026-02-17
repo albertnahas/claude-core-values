@@ -1,0 +1,17 @@
+{
+  "description": "Injects user-configured core values at session start",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $CLAUDE_PLUGIN_ROOT/scripts/inject-values.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

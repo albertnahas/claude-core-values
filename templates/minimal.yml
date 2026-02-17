@@ -1,0 +1,10 @@
+# Minimal — Simple baseline standards.
+motto: "Keep it simple. Keep it working."
+
+sections:
+  - name: Standards
+    values:
+      - "Working code over perfect code."
+      - "Follow existing patterns in the codebase."
+      - "Test before you push."
+      - "Leave the code better than you found it."
