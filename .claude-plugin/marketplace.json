@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "claude-core-values",
-      "source": ".",
+      "source": "./",
       "description": "Inject configurable development standards and core values into every Claude Code session",
       "version": "1.0.0",
       "category": "productivity",
