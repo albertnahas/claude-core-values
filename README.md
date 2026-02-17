@@ -37,8 +37,8 @@ Beyond the reinforcement advantage, the plugin also provides:
 
 The plugin reads your `core-values.yml` and injects it through two hooks:
 
-1. **SessionStart** — Full values injected when any session begins (new, resumed, or post-compaction)
-2. **UserPromptSubmit** — Your motto reinforced as a brief reminder on every prompt you send
+1. **SessionStart** — Full values injected when any session begins (new, resumed, or post-compaction). ~300-400 tokens depending on template.
+2. **UserPromptSubmit** — Only your motto as a single-line reminder (~15 tokens per prompt). Over a 50-turn session that's ~750 tokens total — negligible against a 200k context window.
 
 ## Installation
 
