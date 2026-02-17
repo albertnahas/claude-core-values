@@ -43,13 +43,7 @@ The plugin reads your `core-values.yml` and injects it through two hooks:
 ## Installation
 
 ```bash
-claude plugin add /path/to/claude-core-values
-```
-
-Or clone and add:
-
-```bash
-git clone https://github.com/albertonahas/claude-core-values.git
+git clone https://github.com/albertnahas/claude-core-values.git
 claude plugin add ./claude-core-values
 ```
 
