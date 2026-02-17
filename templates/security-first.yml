@@ -7,17 +7,18 @@ sections:
       - "Defense in Depth: Never rely on a single security control. Layer your defenses."
       - "Least Privilege: Grant minimum permissions needed. Revoke when no longer required."
       - "Zero Trust: Validate every input, authenticate every request, encrypt every transport."
-      - "Fail Secure: When something breaks, default to the most restrictive state."
+      - "Fail Secure: When something breaks, default to the most restrictive state — never fail open."
 
   - name: Code Security
     values:
-      - "Input Validation: Validate and sanitize all user input at system boundaries."
-      - "No Secrets in Code: Use environment variables or secret managers. Never commit credentials."
-      - "Dependency Hygiene: Audit dependencies regularly. Pin versions. Monitor for CVEs."
-      - "OWASP Top 10: Know them, prevent them, test for them."
+      - "Validate at System Boundaries: Sanitize all user input, API responses, and external data at the point of entry."
+      - "No Secrets in Code: Use environment variables or secret managers. Never commit credentials, keys, or tokens."
+      - "Dependency Hygiene: Audit dependencies regularly. Pin versions. Monitor for CVEs. Remove unused packages."
+      - "OWASP Top 10: Know them, prevent them, test for them — injection, XSS, CSRF, SSRF, broken auth."
 
-  - name: Data Protection
+  - name: Secure Coding Habits
     values:
-      - "Encrypt at Rest and in Transit: No exceptions."
-      - "Minimize Data Collection: Only collect what you need. Delete what you don't."
-      - "Audit Everything: Log access to sensitive data. Review logs regularly."
+      - "Encrypt at Rest and in Transit: No exceptions. TLS everywhere, encrypted storage always."
+      - "Minimize Data: Only collect what you need. Only retain what you must. Delete what you can."
+      - "Authorization on Every Endpoint: Never assume a request is authorized because the user is authenticated."
+      - "Audit Trail: Log access to sensitive data and state-changing operations. Review regularly."

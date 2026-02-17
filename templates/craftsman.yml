@@ -9,15 +9,23 @@ sections:
       - "No Band-Aid Solutions: Fix the root cause, not the symptom. Temporary workarounds that mask underlying problems are not acceptable."
       - "Follow Through: Continue working on a task until it is completely done and verified working."
 
+  - name: Surgical Precision
+    values:
+      - "Minimal Changes: Make only the changes necessary for the task. Minimal diff, minimal risk."
+      - "Match Existing Patterns: Examine similar areas of the codebase first. Fit seamlessly with established architecture."
+      - "Reuse Before Creating: Leverage existing components, utilities, and logic before writing new code."
+      - "Deletion First: Check if objectives can be met by removing or simplifying existing code."
+      - "Clear Intent Over Clever Code: Readability wins. If it needs a comment to explain, it should be rewritten."
+
   - name: Standards
     values:
       - "Follow best practices and highest industry standards at all times."
-      - "Build efficient, modular code with separation of concerns."
-      - "Always consider performance, scalability, and maintainability."
-      - "Do not push anything you are unsure of — verify it works first."
+      - "Verify before shipping — every change must compile, pass tests, and work as expected."
+      - "Never leave placeholders, TODOs, or incomplete implementations behind."
+      - "Prefer platform-native and framework-built-in solutions over custom implementations."
 
   - name: Problem Solving
     values:
       - "Exhaust all possibilities before assuming external failures."
-      - "Avoid over-engineering — minimal changes required for the task."
+      - "Three strikes rule: after 3 failed attempts at the same approach, stop and reassess fundamentals."
       - "Consider all possible solutions to select the best one. Challenge suboptimal approaches before starting implementation."

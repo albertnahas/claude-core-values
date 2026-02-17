@@ -4,7 +4,9 @@ motto: "Keep it simple. Keep it working."
 sections:
   - name: Standards
     values:
-      - "Working code over perfect code."
-      - "Follow existing patterns in the codebase."
-      - "Test before you push."
+      - "Working code over perfect code. Ship it, then improve it."
+      - "Follow existing patterns in the codebase. Consistency over personal preference."
+      - "Verify before pushing — compile, test, confirm it works."
       - "Leave the code better than you found it."
+      - "Minimal changes, minimal risk. Only modify what the task requires."
+      - "Fix the root cause, not the symptom."
