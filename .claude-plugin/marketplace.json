@@ -1,0 +1,19 @@
+{
+  "name": "claude-core-values",
+  "owner": {
+    "name": "Albert Nahas"
+  },
+  "metadata": {
+    "description": "Configurable development standards with three-layer reinforcement"
+  },
+  "plugins": [
+    {
+      "name": "claude-core-values",
+      "source": ".",
+      "description": "Inject configurable development standards and core values into every Claude Code session",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": ["quality", "standards", "values", "hooks", "reinforcement"]
+    }
+  ]
+}

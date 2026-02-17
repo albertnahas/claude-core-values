@@ -42,9 +42,11 @@ The plugin reads your `core-values.yml` and injects it through two hooks:
 
 ## Installation
 
-```bash
-git clone https://github.com/albertnahas/claude-core-values.git
-claude plugin add ./claude-core-values
+Add the marketplace and install the plugin:
+
+```
+/plugin marketplace add albertnahas/claude-core-values
+/plugin install claude-core-values@claude-core-values
 ```
 
 ## Quick Start
