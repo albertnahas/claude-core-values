@@ -1,5 +1,5 @@
 {
-  "description": "Injects user-configured core values at session start",
+  "description": "Three-layer core values reinforcement: full injection at session start, re-injection after compaction, brief reminder on every prompt",
   "hooks": {
     "SessionStart": [
       {
@@ -7,8 +7,19 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $CLAUDE_PLUGIN_ROOT/scripts/inject-values.sh",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/inject-values.sh",
             "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/inject-reminder.sh",
+            "timeout": 5
           }
         ]
       }

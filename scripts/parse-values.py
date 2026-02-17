@@ -63,8 +63,17 @@ def format_markdown(data):
     return "\n".join(lines).rstrip()
 
 
+def format_reminder(data):
+    """Format a brief one-liner reinforcement from the motto."""
+    motto = data.get("motto", "")
+    if motto:
+        print(f"Core values reminder: {motto}")
+
+
 def main():
-    config_path = sys.argv[1] if len(sys.argv) > 1 else None
+    motto_only = "--motto" in sys.argv
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    config_path = args[0] if args else None
     if not config_path or not os.path.isfile(config_path):
         sys.exit(0)
 
@@ -80,7 +89,10 @@ def main():
     if not data:
         sys.exit(0)
 
-    print(format_markdown(data))
+    if motto_only:
+        format_reminder(data)
+    else:
+        print(format_markdown(data))
 
 
 if __name__ == "__main__":

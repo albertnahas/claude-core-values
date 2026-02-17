@@ -2,9 +2,43 @@
 
 A Claude Code plugin that injects configurable development standards and core values into every session. Define your team's principles once, enforce them automatically.
 
+## Why Not Just Use CLAUDE.md?
+
+You can — `~/.claude/CLAUDE.md` supports global instructions. But there are documented reasons why instructions placed there get ignored in practice, and this plugin addresses each one.
+
+### The CLAUDE.md Problem
+
+CLAUDE.md content is [injected with a disclaimer](https://github.com/anthropics/claude-code/issues/22309) that tells Claude it *"may or may not be relevant"* and should only be followed *"if highly relevant."* This framing causes Claude to [treat your rules as suggestions](https://github.com/anthropics/claude-code/issues/21119), especially as context grows. Multiple open issues ([#7777](https://github.com/anthropics/claude-code/issues/7777), [#15443](https://github.com/anthropics/claude-code/issues/15443), [#21385](https://github.com/anthropics/claude-code/issues/21385)) document Claude ignoring explicit CLAUDE.md instructions in favor of training-data patterns.
+
+On top of that, CLAUDE.md is loaded once at session start. As the conversation grows, your values compete with thousands of tokens of code, tool output, and discussion. When the context window fills and gets [compacted](https://code.claude.com/docs/en/hooks), CLAUDE.md content gets summarized away with everything else.
+
+### How This Plugin Fixes It
+
+The plugin uses a **three-layer reinforcement** strategy that CLAUDE.md cannot replicate:
+
+| Layer | Hook Event | What It Does |
+|-------|-----------|-------------|
+| **Full injection** | `SessionStart` | Injects all values at session start — and re-injects them fresh after every compaction (the hook fires on `compact` too) |
+| **Per-prompt reminder** | `UserPromptSubmit` | Reinforces your motto on every single prompt, keeping values salient as context grows |
+| **No disclaimer** | Both | Hook output arrives as a clean `system-reminder` — no *"may or may not be relevant"* framing undermining your instructions |
+
+This means your values are injected without the disclaimer that weakens CLAUDE.md, reinforced on every interaction so they don't fade, and automatically restored after context compaction.
+
+### Plus: Better Management
+
+Beyond the reinforcement advantage, the plugin also provides:
+
+- **Starter templates.** Pick `craftsman`, `startup`, `security-first`, or `minimal` — running in one command instead of staring at a blank file.
+- **Team distribution.** `claude plugin add` gives everyone identical standards. No "copy these 30 lines" and no drift.
+- **Per-project overrides.** Run different values per project without touching any CLAUDE.md.
+- **Structured config.** YAML with typed sections, easier to diff and version than freeform markdown.
+
 ## How It Works
 
-On every session start, the plugin reads your `core-values.yml` config and injects it as a system-level context message. Claude operates under these values for the entire session — no manual reminders needed.
+The plugin reads your `core-values.yml` and injects it through two hooks:
+
+1. **SessionStart** — Full values injected when any session begins (new, resumed, or post-compaction)
+2. **UserPromptSubmit** — Your motto reinforced as a brief reminder on every prompt you send
 
 ## Installation
 
